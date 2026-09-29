@@ -1,0 +1,42 @@
+Exact enumeration
+  output sequences: 8
+  direct mass: 1
+  speculative mass: 1
+  identical exact distributions: True
+  examples:
+    ('<eos>',): 0.22222222
+    ('A', '<eos>'): 0.16666667
+    ('B', '<eos>'): 0.12698413
+    ('B', 'A', 'A'): 0.12698413
+    ('B', 'B', 'C'): 0.11428571
+
+Residual counterexamples
+  first-position residual: {'A': 1.0}
+  resampling target matches: False
+  uniform correction matches: False
+  examples of corrupted probabilities:
+    ('A', '<eos>'): target=0.16000000000000003 wrong=0.11760000000000001
+    ('A', 'A'): target=0.04000000000000001 wrong=0.0364
+    ('A', 'B'): target=0.08000000000000002 wrong=0.044800000000000006
+
+Monte Carlo supplement and accounting
+  samples: 40000
+  max |empirical direct frequency - exact target|: 0.002263
+  max |empirical speculative frequency - exact target|: 0.002363
+  logical target forwards: 74440
+  target positions evaluated: 185733
+  draft forwards / positions: 160796 / 160796
+  accepted draft tokens: 82318
+  bonus tokens: 6184
+  correction tokens: 51215
+  rejection events: 51215
+  wasted target positions after first rejection: 46016
+  mean accepted draft tokens/event: 1.1058
+  target forwards per output token: 0.5328
+  target positions per output token: 1.3294
+
+Low-acceptance comparison
+  rejection rate/round: 0.7437
+  target forwards/output: 0.6587
+  target positions/output: 1.5213
+  draft positions/output: 1.2943
